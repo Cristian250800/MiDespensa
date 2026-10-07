@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Paleta Base -->
+    <color name="brown_primary">#4A2C11</color>
+    <color name="brown_primary_dark">#2E1A0A</color>
+    <color name="brown_secondary">#7A5230</color>
+
+    <!-- Fondos y Superficies -->
+    <color name="bg_cream">#F8F5F0</color>
+    <color name="surface_white">#FFFFFF</color>
+    <color name="divider_color">#E5DCD3</color>
+
+    <!-- Colores de Texto -->
+    <color name="text_dark_brown">#1A0C00</color>   <!-- Texto principal y títulos -->
+    <color name="text_medium_brown">#5D4037</color> <!-- Pistas e indicaciones -->
+
+    <!-- Botones de Acción (+ / -) -->
+    <color name="action_add_green">#2E7D32</color>
+    <color name="action_sub_red">#C62828</color>
 </resources>

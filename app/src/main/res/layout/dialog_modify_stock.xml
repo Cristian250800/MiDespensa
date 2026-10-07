@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/surface_white"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir producto"
+        android:textColor="@color/text_dark_brown"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Campo 1: Nombre del producto -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Buscar producto"
+        android:textColorHint="@color/text_dark_brown"
+        app:boxBackgroundColor="@color/bg_cream"
+        app:boxStrokeColor="@color/text_dark_brown"
+        app:hintTextColor="@color/text_dark_brown">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/actvProductName"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:inputType="textCapWords"
+            android:textColor="@color/text_dark_brown" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo 2: Ubicación -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Ubicación"
+        android:textColorHint="@color/text_dark_brown"
+        app:boxBackgroundColor="@color/bg_cream"
+        app:boxStrokeColor="@color/text_dark_brown"
+        app:hintTextColor="@color/text_dark_brown">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/actvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:inputType="none"
+            android:text=""
+            android:textColor="@color/text_dark_brown" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo 3: Cantidad -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Cantidad (unidades)"
+        android:textColorHint="@color/text_dark_brown"
+        app:boxBackgroundColor="@color/bg_cream"
+        app:boxStrokeColor="@color/text_dark_brown"
+        app:hintTextColor="@color/text_dark_brown">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDialogQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:inputType="number"
+            android:text=""
+            android:textColor="@color/text_dark_brown" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo 4: Fecha de Caducidad (Opcional) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilExpiryDate"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Fecha de caducidad (Opcional)"
+        android:textColorHint="@color/text_dark_brown"
+        app:boxBackgroundColor="@color/bg_cream"
+        app:boxStrokeColor="@color/text_dark_brown"
+        app:hintTextColor="@color/text_dark_brown">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDialogExpiryDate"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:clickable="true"
+            android:focusable="false"
+            android:textColor="@color/text_dark_brown" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
