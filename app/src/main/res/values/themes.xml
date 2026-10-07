@@ -1,9 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.MiDespensa" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
+    <!-- Tema principal app -->
+    <style name="Theme.MiDespensa" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
-    <style name="Theme.MiDespensa" parent="Base.Theme.MiDespensa" />
+        <!-- Colores primarios del tema -->
+        <item name="colorPrimary">@color/brown_primary</item>
+        <item name="colorPrimaryVariant">@color/brown_primary_dark</item>
+        <item name="colorOnPrimary">@color/surface_white</item>
+
+        <!-- Color barra superior del móvil -->
+        <item name="android:statusBarColor">@color/brown_primary</item>
+
+        <!-- Iconos de la barra -->
+        <item name="android:windowLightStatusBar">false</item>
+
+    </style>
 </resources>

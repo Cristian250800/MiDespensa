@@ -192,7 +192,7 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Botón RESTAR -->
+        <!-- Botón RESTA-->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/btnHomeSubtract"
             android:layout_width="match_parent"

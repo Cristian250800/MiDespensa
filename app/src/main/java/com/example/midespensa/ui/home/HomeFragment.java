@@ -17,6 +17,7 @@ import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -54,9 +55,19 @@ public class HomeFragment extends Fragment {
 
         TextView tvDialogTitle = dialogView.findViewById(R.id.tvDialogTitle);
         MaterialAutoCompleteTextView actvProductName = dialogView.findViewById(R.id.actvProductName);
+        MaterialAutoCompleteTextView actvLocation = dialogView.findViewById(R.id.actvLocation);
         TextInputEditText etQuantity = dialogView.findViewById(R.id.etDialogQuantity);
 
+        // Contenedores para controlar la visibilidad
+        TextInputLayout tilLocation = dialogView.findViewById(R.id.tilLocation);
+        TextInputLayout tilExpiryDate = dialogView.findViewById(R.id.tilExpiryDate);
+        TextInputEditText etExpiryDate = dialogView.findViewById(R.id.etDialogExpiryDate);
+
         tvDialogTitle.setText(isAdding ? "Añadir Alimento" : "Restar Alimento");
+
+        // Para que al restar se oculten y  solo queden Producto y Cantidad
+        tilLocation.setVisibility(isAdding ? View.VISIBLE : View.GONE);
+        tilExpiryDate.setVisibility(isAdding ? View.VISIBLE : View.GONE);
 
         // Adaptador con sugerencias de productos existentes
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
